@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2-assignment#1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+<style>
+    .div_navtop button{
+        border-radius: 25px;
+        padding: 6px 15px;
+        margin: 48px 2px;
+    }
+    .changer{
+        position:fixed;bottom:1%;right:1%;
+    }
+    .div_first{
+        margin: 48px 2px;
+        display: flex;
+    }
+    .div_second{
+        margin: 48px 6px;
+    }
+    .button-hover{
+        flex: 1 1 auto;
+        min-width: 1px;
+        background-color: white;
+        color:gray;
+        border:1px solid gray;
+    }
+    .button-hover:hover{
+        background-color: rgb(100, 110, 110);
+        color:white;
+        border:none;
+    }
+    .hover-button{
+        color:white;
+        background-color: blue;
+        border-radius:50%;
+        border:1px solid blue;
+    }
+    .hover-button:hover{
+        color:blue;
+        background-color:white;
+        border-radius: 50%;
+    }
+    .dark-hover{
+        color:blue;
+    }
+    .dark-hover:hover{
+        color:rgb(8, 8, 197);
+    }
+    .div_third{
+        margin: 48px 2px;
+    }
+    .div_fourth{
+        margin: 48px 2px;
+    }
+    .div_fifth{
+        margin: 48px 2px;
+    }
+    .dropdown-toggle{
+        color: white;
+        background-color: blueviolet;
+        display: flex;
+    }
+    .dropdown-toggle:hover{
+        color: white;
+        background-color: rgb(110, 35, 180);
+    }
+    .div_board{
+        background-color: lightgray;
+        margin:0px 1px;
+        width:100%;
+        height:50px;
+    }
+    :root[data-bs-theme="dark"]{
+    --bs-dropdown-bg:#1d1f28;
+    --bs-dropdown-link-active-bg:#0d6efd;
+    --bs-dropdown-link-active-color:#fff;
+    }
+</style>
+
+</head>
+<body style="text-align: center;">
+     <div class="div_navtop">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+     </div>
+        <div class="div_board"></div>
+        <div class="changer">
+            <div class="dropdown theme-switch">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" data-bs-theme-value="light">Light</a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-theme-value="dark">Dark</a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-theme-value="auto">Auto</a></li>
+                </ul>
+            </div>
+        </div>
+       <div class="div_first">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary button-hover" type="button">Secondary action</button>
+                <button class="btn btn-primary" type="button">Primary action</button>
+            </div>
+        </div>
+        <div class="div_board"></div>
+        <div class="div_second">
+            <p class="d-inline-flex gap-1">
+                <button type="button" class="btn btn-primary" data-bs-toggle="button">Primary icon
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-primary button-hover" data-bs-toggle="button">Secondary icon
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </button>
+            </p>
+        </div>
+        <div class="div_board"></div>
+        <div class="div_third">
+           <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span class="visually-hidden" role="status">Loading...</span>
+            </button>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+            </button>
+       </div>
+       <div class="div_board"></div>
+       <div class="div_fourth">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-circle-fill dark-hover" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-circle-fill hover-button" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+            </svg>
+       </div>
+       <div class="div_fifth">
+           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x-circle-fill dark-hover" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x-circle-fill hover-button" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+            </svg>
+       </div>
+       <div class="div_board"></div>
+    </div>
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const apply = (v) => {
+    document.documentElement.setAttribute('data-bs-theme', v);
+  };
+
+  const saved = localStorage.getItem('theme') || 'light';
+  apply(saved);
+
+  document.querySelectorAll('[data-bs-theme-value]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = btn.dataset.bsThemeValue;   
+      localStorage.setItem('theme', v);
+      apply(v);
+    });
+  });
+});
+</script>
+</body>
+</html>
