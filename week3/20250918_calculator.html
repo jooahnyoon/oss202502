@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    input : <input type="text" class="input_event" />
+
+    <h2>계산기입니다!</h2>
+    <form>
+        <input type="number" name="input_num1" id="input_num1" />+
+        <input type="number"name="input_num2" id="input_num2" />
+        <button type = "button" onclick="listener_add()">=</button>
+        <input type="number" name="input_result" id="input_result" /> 
+        </br></br>
+        <input type="reset" value="취소" />
+    </form>
+
+    <div id="div_test" 
+    onclick="alert('clicked')"
+    onmouseover="console.log('mouse in..'); listener_mouseover()"
+    onmouseout="listener_mouseout();"
+    style="background-color: blanchedalmond; height:200px">
+
+    </div>
+
+    <script>
+        let input_event = document.getElementsByClassname("input_event")[0];
+        input_event.addEventListener("keydown",function(){console.log("kd!")});
+        input_event.addEventListener("focus", function(){
+            input_event.style="height:100px;"
+        })
+
+        function listener_mouseout(){
+            let div_test = document.getElementById("div_test");
+            div_test.innerHTML = "hahaha!";
+        }
+        function listener_mouseover(){
+            let div_test = document.getElementById("div_test");
+            div_test.style = "background-color:yellow";
+            div_test.innerHTML = '<img src="https://media.istockphoto.com/id/520700958/ko/%EC%82%AC%EC%A7%84/%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%EA%BD%83-%EB%B0%B0%EA%B2%BD%EA%B8%B0%EC%88%A0.jpg?s=612x612&w=0&k=20&c=gJx5-O9U1qXKZqKwv4KunrBae7RDNRcdse1nOdSk_0w=">';
+        }
+        function listener_add(){
+            let input_num1 = document.getElementById("input_num1");
+            let input_num2 = document.getElementById("input_num2");
+            let sum = Number(input_num1.value) + Number(input_num2.value);
+            let input_result = document.getElementById("input_result");
+            alert(sum);
+        }
+        /*
+         function add(){
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+            
+            var sum = parseInt(num1.value) + parseInt(num2.value);
+
+            var result = document.getElementById("result");
+            result.value = sum;
+        }
+            */
+    </script>
+</body>
+</html>
